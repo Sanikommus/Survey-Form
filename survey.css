@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oxygen:wght@700&display=swap');
+
+html {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+:root {
+    --border-color: rgb(184, 166, 139);
+    --form-background: rgb(68, 36, 7);
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgb(146, 121, 52);
+    background-image:
+        linear-gradient(
+            45deg,
+            rgba(180, 148, 106, 0.8),
+            rgba(163, 125, 76, 0.75)
+        ),
+        url(https://www.strategicamerica.com/wp-content/uploads/2020/11/Virtual-meeting-1-scaled.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 0 0 3rem 0;
+}
+
+/* Page title */
+#title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 4rem;
+    color: black;
+}
+
+/* Description styling */
+#description {
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Form container */
+#survey-form {
+    background-color: var(--form-background);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input, select, and textarea styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Radio buttons and checkboxes */
+p {
+    font-size: 1rem;
+    margin: 15px 0 5px;
+}
+
+label input {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(228, 192, 158);
+    color: rgba(16, 16, 17, 0.87);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--form-background);
+    color: white;
+}
+
+/* Form responsiveness */
+@media (max-width: 600px) {
+    #survey-form {
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+
+/* Additional styling for form */
+form {
+    text-align: left;
+    font-size: 1.08rem;
+    margin: 3rem auto;
+    max-width: 650px;
+    display: block;
+    position: relative;
+    padding: 15px 30px;
+    color: white;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="text"]::placeholder {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-bottom: 7px;
+    margin-right: 10px;
+}
+
+#dropdown {
+    width: 101%;
+    background-color: white;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    min-width: 300px;
+    height: 2.4em;
+    font-size: 1.15rem;
+    font-weight: bolder;
+    background-color: rgb(228, 192, 158);
+    color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--form-background);
+    color: white;
+    cursor: pointer;
+}
+
+legend, label:last-of-type {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    margin-top: 10px;
+}
